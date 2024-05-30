@@ -782,8 +782,7 @@ body{
 }
 
 .theme-switch-input:checked + .theme-switch-label::after{
-    left: 57.5px;
-    transform: translateX(-100%);
+    left: 32.5px;
     background: linear-gradient(180deg, #777, #3a3a3a);
 }
 
