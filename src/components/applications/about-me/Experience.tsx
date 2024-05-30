@@ -81,7 +81,7 @@ const EXPERIENCES: ExperienceType[] = [
         stint: 'May, 2015 - Jul, 2015'
     },
     {
-        title: 'Bachelors of Technology',
+        title: 'Bachelor of Technology',
         company: 'National Institute of Technology, Rourkela',
         location: 'Rourkela, India',
         desc: [],
