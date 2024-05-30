@@ -1,6 +1,7 @@
 import { motion } from "framer-motion"
 import heroBg from '@assets/bg-video/hero_bg.mp4'
 import { useOSContext } from "@hooks/useOSContext"
+import { usePhoneDevice } from "@hooks/usePhoneDevice"
 
 const Hero = () => {
     const {introRef} = useOSContext()
@@ -8,10 +9,11 @@ const Hero = () => {
         e.stopPropagation()
         if (introRef.current) introRef.current.scrollIntoView({behavior: 'smooth'})
     }
+    const { isPhone } = usePhoneDevice()
 
     return (
         <div className="hero">
-            <video src={heroBg} autoPlay loop muted id="hero-video"></video>
+            {!isPhone && <video src={heroBg} autoPlay loop muted id="hero-video"></video>}
             <div className="hero-inner">
                 <p style={{fontFamily: 'Ubuntu Mono', fontSize: '3rem'}}>Hi, I'm <span style={{color: 'lightgreen'}}>Rasesh</span></p>
                 <p style={{fontFamily: 'monospace', fontSize: '1.2rem'}} >I’m a full stack engineer passionate about working on technology and products that help people achieve better experience.</p>

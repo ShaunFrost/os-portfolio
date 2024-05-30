@@ -171,6 +171,18 @@ body{
     transition: all 0.5s;
 }
 
+.phone-app-close-button{
+    position: absolute;
+    z-index: 3;
+    right: 5px;
+    top: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: red;
+    font-size: 1.5em;
+}
+
 .application.minimize{
     opacity: 0;
     visibility: hidden;
@@ -361,15 +373,12 @@ body{
     align-items: center;
 }
 
-.roles{
+.tech{
     position: relative;
     display: flex;
+    flex-direction: row;
     width: 100%;
-    gap: 30px;
-}
-
-.tilt-tile{
-    width: 100%;
+    justify-content: space-around;
 }
 
 .tilt-tile-div{
@@ -421,12 +430,7 @@ body{
 
 .cloud-tag-item{
     color: skyblue;
-    transition: all 0.2s;
     text-shadow: 0 0 1px #fff, 0 0 2px #fff, 0 0 3px #e60073, 0 0 4px #e60073;
-}
-
-.cloud-tag-item:hover{
-    scale: 1.2;
 }
 
 .contact{
@@ -516,6 +520,15 @@ body{
     /* overflow: hidden; */
 }
 
+.projects-phone{
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
 .project-div{
     height: 60%;
     width: 60%;
@@ -528,6 +541,18 @@ body{
     border: 1px solid black;
     box-shadow: rgba(255, 69, 243, 0.8) 0 5px 5px, rgba(255, 69, 243, 0.8) 5px 0px 5px, rgba(255, 69, 243, 0.8) 0 -5px 5px, rgba(255, 69, 243, 0.8) -5px 0px 5px;
     position: absolute;
+}
+
+.project-phone-div{
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    background-color: hsl(0, 0%, 40%);
+    border: 1px solid black;
+    box-shadow: rgba(255, 69, 243, 0.8) 0 5px 5px, rgba(255, 69, 243, 0.8) 5px 0px 5px, rgba(255, 69, 243, 0.8) 0 -5px 5px, rgba(255, 69, 243, 0.8) -5px 0px 5px;
 }
 
 .left-pane{
@@ -587,6 +612,26 @@ body{
     /* background-color: wheat; */
 }
 
+.project-phone-buttons{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    margin-bottom: 10px;
+}
+
+.project-phone-buttons button{
+    border: none;
+    padding-left: 16px;
+    padding-right: 16px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    border-radius: 8px;
+    background-color: hsl(180, 25%, 25%);
+    color: whitesmoke;
+}
+
 .project-buttons button{
     border: none;
     padding-left: 16px;
@@ -631,6 +676,10 @@ body{
     overflow-y: scroll;
 }
 
+.resume-img{
+    width: 100%;
+}
+
 .download-resume{
     position: absolute;
     top: 5%;
@@ -658,6 +707,11 @@ body{
     top: calc(20px + 10%);
     padding: 0;
     background-color: transparent;
+}
+
+.spotify-iframe{
+    height: 200px;
+    width: 300px;
 }
 
 .date-time{
@@ -876,8 +930,81 @@ body{
     transform: translateY(-10px) scale(1.2, 1.2);
 }
 
-@media (max-width: 480px) or (max-height: 480px) {
+@media (max-width: 768px) {
+    :root {
+        --desktop_background_img: url('./assets/os-bg-mobile.jpg');
+    }
+    [data-theme="dark"] {
+        --desktop_background_img: url('./assets/os-bg-dark-mobile.jpg');
+    }
     .date-time{
         display: none;
+    }
+    .spotify-player{
+        left: 50%;
+        transform: translateX(-175px);
+    }
+    .spotify-iframe{
+        height: 200px;
+        width: 350px;
+    }
+    .desktop-bar-icons{
+        width: 100%;
+    }
+    .dock{
+        width: 350px;
+        z-index: 0;
+    }
+    .application{
+        top: 20px;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        border-radius: 0;
+        border: none;
+        box-shadow: none;
+    }
+    .application-header{
+        display: none;
+    }
+    .hero{
+        background-image: url('./assets/bg-video/hero_bg.gif');
+    }
+    .hero-inner{
+        width: 95%;
+    }
+    .introduction{
+        background-image: url('./assets/bg-video/intro_bg.gif');
+    }
+    .skills{
+        background-image: url('./assets/bg-video/stars_bg.gif');
+        background-size: cover;
+    }
+    .tech{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 20px;
+    }
+    .tilt{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .tilt-tile-div{
+        width: 70%;
+    }
+    .resume-img{
+        width: 600px;
+        overflow-x: scroll;
+    }
+    .social{
+        top: 60%;
+    }
+    .projects{
+        overflow-y: scroll;
+    }
+    .scroll-helper{
+        bottom: 10%;
     }
 }

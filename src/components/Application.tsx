@@ -1,6 +1,8 @@
 import React, { PropsWithChildren, useState, useEffect, useRef } from "react"
 import { useOSContext } from "@hooks/useOSContext"
+import { usePhoneDevice } from "@hooks/usePhoneDevice"
 import { APPS } from '@constants'
+import { IoCloseCircle } from "react-icons/io5"
 
 type ApplicationProps = PropsWithChildren & {
     id: APPS,
@@ -13,6 +15,9 @@ const Application = ({children, id, minimize}: ApplicationProps) => {
         addToDesktopApps, closeApplication, minimizeApplication, 
         maximizeApplication, resetApplicationToNormal, appRefs 
     } = useOSContext()
+
+    const { isPhone } = usePhoneDevice()
+
     const [draggable, setDraggable] = useState(false)
     const [isMaximized, setIsMaximized] = useState(false)
     const [pos, setPos] = useState({ x: 0, y: 0})
@@ -103,6 +108,11 @@ const Application = ({children, id, minimize}: ApplicationProps) => {
             <div className="application-body">
                 {children}
             </div>
+            {
+                isPhone && <div className="phone-app-close-button" onClick={handleClose}>
+                    <IoCloseCircle />
+                </div>
+            }
         </div>
     )
 }

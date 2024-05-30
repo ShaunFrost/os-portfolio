@@ -3,6 +3,7 @@ import { FaWifi } from "react-icons/fa"
 import { IoBatteryCharging } from "react-icons/io5"
 import { APPS } from "@constants"
 import { useOSContext } from "@hooks/useOSContext"
+import { usePhoneDevice } from "@hooks/usePhoneDevice"
 
 type ActionType = {
     name: string
@@ -28,17 +29,29 @@ const ACTIONS: ActionType[] = [
     }
 ]
 
+const PHONE_ACTIONS: ActionType[] = [
+    {
+        name: 'Close',
+        application: APPS.NONE
+    }
+]
+
 const DesktopTopBar = () => {
     const { time, date } = useTime();
-    const { openApplication } = useOSContext()
+    const { openApplication, currentApplication, closeApplication } = useOSContext()
     const handleActionClick = (application: APPS) => {
-        openApplication(application)
+        if (application !== APPS.NONE) {
+            openApplication(application)
+        } else {
+            closeApplication(currentApplication)
+        }
     }
+    const { isPhone } = usePhoneDevice()
     return (
         <div className="desktop-top-bar">
             <div className="desktop-bar-actions">
                 {
-                    ACTIONS.map((action) => {
+                    (!isPhone ? ACTIONS : (currentApplication !== APPS.NONE ? PHONE_ACTIONS: [])).map((action) => {
                         return <div key={action.name} className="action" onClick={() => handleActionClick(action.application)}>
                             {action.name}
                         </div>

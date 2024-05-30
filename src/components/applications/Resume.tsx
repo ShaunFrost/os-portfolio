@@ -16,7 +16,7 @@ export const Resume = () => {
                 </a>
             </div>
             <Tooltip id="download-tt"/>
-            <img src={resume} width={"100%"}/>
+            <img className="resume-img" src={resume}/>
         </div>
     )
 }

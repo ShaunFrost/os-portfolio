@@ -13,7 +13,7 @@ const Desktop = () => {
         <div className="desktop">
             <DesktopTopBar />
             {
-                desktopApps.map(app => {
+                desktopApps.map((app) => {
                     return <Application id={app.id} key={app.id} minimize={app.minimize}>
                         {app.app}
                     </Application>

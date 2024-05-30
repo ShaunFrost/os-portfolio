@@ -9,6 +9,7 @@ import node_svg from '@assets/tech/node-js-svgrepo-com.svg'
 import introBg from '@assets/bg-video/intro_bg.mp4'
 import { headerVariants } from "@constants"
 import { useOSContext } from "@hooks/useOSContext"
+import { usePhoneDevice } from "@hooks/usePhoneDevice"
 
 type TechType = {
     tech: string[]
@@ -37,11 +38,12 @@ const paraVariants = {
 
 const Introduction = () => {
     const {introRef} = useOSContext()
+    const { isPhone } = usePhoneDevice()
     return (
         <div className="introduction">
             <span id="introduction" style={{position: "absolute", top: 0}} ref={introRef}>
             </span>
-            <video src={introBg} autoPlay loop muted id="hero-video"></video>
+            {!isPhone && <video src={introBg} autoPlay loop muted id="hero-video"></video>}
             <motion.div className="intro-div"
                 variants={headerVariants}
             >
@@ -62,7 +64,7 @@ const Introduction = () => {
                 and scalable solutions!
             </motion.p>
 
-            <div className="roles">
+            <div className="tech">
                 {
                     TECHS.map((tech, index) => {
                         return <TechCard key={`tech-${index}`} index={index} tech={tech}/>
@@ -88,11 +90,11 @@ const tiltVariants = {
 
 const TechCard = ({index, tech}: TechCardProps) => {
     return (
-        <Tilt className="tilt-tile">
+        <Tilt className="tilt">
             <motion.div className="tilt-tile-div"
-                variants={tiltVariants} transition={{type: 'spring', delay: (index) * 0.3, duration: 0.5}}
+                variants={tiltVariants} transition={{type: 'spring', delay: (index) * 0.2, duration: 0.6}}
             >
-                <div style={{display: 'flex', flexDirection: 'column', justifyContent: 'space-around', alignItems: 'center', gap: '30px', paddingTop: '30px', paddingBottom: '30px'}}>
+                <div style={{display: 'flex', flexDirection: 'column', justifyContent: 'space-around', alignItems: 'center', gap: '30px', padding: '30px'}}>
                     {
                         tech.tech.map((techIcon) => {
                             return <img key={techIcon} src={techIcon} width={100} />

@@ -2,11 +2,13 @@ import { TagCloud } from '@frank-mayer/react-tag-cloud'
 import skillsBg from '@assets/bg-video/stars_bg.mp4'
 import { motion } from 'framer-motion'
 import { headerVariants, tagCloudVariants } from "@constants"
+import { usePhoneDevice } from '@hooks/usePhoneDevice'
 
 const Skills = () => {
+    const { isPhone } = usePhoneDevice()
     return (
         <div className="skills">
-            <video src={skillsBg} autoPlay loop muted id="skills-video"></video>
+            {!isPhone && <video src={skillsBg} autoPlay loop muted id="skills-video"></video>}
             <motion.div className="skills-div"
                 variants={headerVariants}
             >
@@ -15,7 +17,7 @@ const Skills = () => {
             <motion.div variants={tagCloudVariants}>
                 <TagCloud
                     options={{
-                        radius: 200,
+                        radius: isPhone ? 150 : 200,
                         maxSpeed: "normal",
                         itemClass: "cloud-tag-item",
                         keep: true

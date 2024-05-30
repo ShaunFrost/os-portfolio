@@ -1,41 +1,42 @@
 import { motion } from "framer-motion"
-import { useState } from "react"
+import { useCarousel } from "@hooks/useCarousel"
+import { usePhoneDevice } from "@hooks/usePhoneDevice"
 import { PROJECTS, ProjectType } from "@constants"
 
 export const Projects = () => {
 
-    const [positionIndices, setPositionIndices] = useState([0, 1, 2])
+    const { isPhone } = usePhoneDevice()
 
-    const next = (e: React.MouseEvent) => {
+    const {positionIndices, next, previous} = useCarousel(PROJECTS.length)
+
+    const handleNext = (e: React.MouseEvent) => {
         e.stopPropagation()
-        setPositionIndices(prev => {
-            return prev.map((positionIndex) => {
-                return (positionIndex + 1) % PROJECTS.length
-            })
-        })
+        next()
     }
 
-    const previous = (e: React.MouseEvent) => {
+    const handlePrevious = (e: React.MouseEvent) => {
         e.stopPropagation()
-        setPositionIndices(prev => {
-            return prev.map((positionIndex) => {
-                if (positionIndex === 0) return PROJECTS.length - 1
-                return positionIndex - 1
-            })
-        })
+        previous()
     }
 
     return (
         <div className="projects">
-            <div className="carousel">
+            {!isPhone ? (<div className="carousel">
                 {PROJECTS.map((project, index) => {
                     return <Project key={index} project={project} index={index} positionIndices={positionIndices}/>
                 })}
                 <div className="project-nav">
-                    <button onClick={previous}>Prev</button>
-                    <button onClick={next}>Next</button>
+                    <button onClick={handlePrevious}>Prev</button>
+                    <button onClick={handleNext}>Next</button>
                 </div>
-            </div>
+            </div>) : (<div className="projects-phone">
+                {
+                    PROJECTS.map((project, index) => {
+                        return <ProjectPhone key={index} project={project} index={index} />
+                    })
+                }
+            </div>)
+            }
         </div>
     )
 }
@@ -100,6 +101,42 @@ const Project = ({project, index, positionIndices}: ProjectProps) => {
                     <a href={project.gitlink} target="_blank"><button>Source</button></a>
                     {project.websiteLink && <a href={project.websiteLink} target="_blank"><button>View</button></a>}
                 </div>
+            </div>
+        </motion.div>
+    );
+}
+
+type ProjectPhoneProps = {
+    project: ProjectType,
+    index: number
+}
+
+const ProjectPhone = ({project, index}: ProjectPhoneProps) => {
+
+    const animationVariants = {
+        hidden: {
+            x: -100,
+            opacity: 0
+        },
+        show: {
+            x: 0,
+            opacity: 1,
+        }
+    }
+
+    return (
+        <motion.div
+            key={index}
+            className="project-phone-div"
+            variants={animationVariants}
+            transition={{type: 'spring', delay: (index) * 0.3, duration: 1}}
+        >
+            <h1>{project.name}</h1>
+            <img src={project.pic} width="100%" style={{objectFit: 'cover'}}/>
+            <p>{project.desc}</p>
+            <div className="project-phone-buttons">
+                <a href={project.gitlink} target="_blank"><button>Source</button></a>
+                {project.websiteLink && <a href={project.websiteLink} target="_blank"><button>View</button></a>}
             </div>
         </motion.div>
     );

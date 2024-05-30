@@ -3,8 +3,7 @@ const SpotifyPlayer = () => {
       <div className="spotify-player">
         <iframe
           src="https://open.spotify.com/embed/playlist/2OTMb0mPjkBDsXAEs7COjB?utm_source=generator"
-          height="200px"
-          width="300px"
+          className="spotify-iframe"
           allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
           loading="lazy"
           style={{ border: 0}}

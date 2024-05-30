@@ -6,9 +6,11 @@ import { useOSContext } from "@hooks/useOSContext"
 import { APPS } from "@constants"
 import {motion} from "framer-motion"
 import myPic from '../assets/me.webp'
+import { usePhoneDevice } from "@hooks/usePhoneDevice"
 
 const Dock = () => {
     const { addToDesktopApps } = useOSContext()
+    const { isPhone } = usePhoneDevice()
     return (
         <motion.div className="dock"
         key="dock"
@@ -23,13 +25,13 @@ const Dock = () => {
             </div>
             <Tooltip id="about-tt" />
 
-            <div data-tooltip-id="terminal-tt" data-tooltip-content="Terminal" data-tooltip-delay-show={400} className="dock-icon" 
+            {!isPhone && <><div data-tooltip-id="terminal-tt" data-tooltip-content="Terminal" data-tooltip-delay-show={400} className="dock-icon" 
                 style={{fontSize: '3rem'}}
                 onClick={() => addToDesktopApps(APPS.TERMINAL)}
             >
                 <IoTerminal />
             </div>
-            <Tooltip id="terminal-tt" />
+            <Tooltip id="terminal-tt" /></>}
 
             <div data-tooltip-id="cv-tt" data-tooltip-content="Resume/CV" data-tooltip-delay-show={400} className="dock-icon" 
                 style={{fontSize: '4rem'}}
