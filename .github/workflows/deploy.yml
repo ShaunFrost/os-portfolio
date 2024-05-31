@@ -39,6 +39,10 @@ jobs:
         run: npm ci
       - name: Build
         run: npm run build
+        env:
+          VITE_EMAIL_API_KEY: ${{ vars.VITE_EMAIL_API_KEY }}
+          VITE_EMAIL_SERVICE_ID: ${{ vars.VITE_EMAIL_SERVICE_ID }}
+          VITE_EMAIL_TEMPLATE_ID: ${{ vars.VITE_EMAIL_TEMPLATE_ID }}
       - name: Setup Pages
         uses: actions/configure-pages@v4
       - name: Upload artifact
