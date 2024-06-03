@@ -1,5 +1,5 @@
 import resume from '../../assets/Resume_img.jpg'
-import resume_PDF from '../../assets/Resume_RaseshKRout_updated.pdf'
+import resume_PDF from '../../assets/Resume_RaseshKRout.pdf'
 import { FaDownload } from "react-icons/fa"
 import { Tooltip } from "react-tooltip"
 
