@@ -3,6 +3,7 @@ import neptune_img from '@assets/projects/neptune-sample.webp'
 import wordle_img from '@assets/projects/multiwordle-sample.webp'
 import cps_img from '@assets/projects/create-ps-sample.webp'
 import os_img from '@assets/projects/os-portfolio-sample.webp'
+import neko_img from '@assets/projects/neko-chan-sample.webp'
 
 export enum THEME {
     LIGHT = "light",
@@ -67,6 +68,14 @@ export const PROJECTS: ProjectType[] = [
         pic: wordle_img,
         websiteLink: "https://multiplayer-wordle-game.onrender.com/",
         keywords: ["React", "Socket", "Node", "Express"]
+    },
+    {
+        name: "Neko Chan UI",
+        desc: 'A library of reusable components for React/Typescript projects.',
+        gitlink: "https://github.com/ShaunFrost/neko-chan-ui",
+        pic: neko_img,
+        websiteLink: "https://www.npmjs.com/package/neko-chan-ui",
+        keywords: ["React", "Typescript", "Node"]
     },
     {
         name: "Portfolio-OS",

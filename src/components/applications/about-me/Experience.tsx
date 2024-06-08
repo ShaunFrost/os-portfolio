@@ -53,7 +53,7 @@ const EXPERIENCES: ExperienceType[] = [
         location: 'Chennai, India',
         desc: [
             'Developed a rule based automation tool that converts a Weblogic application, based on pre-defined rules, into open source Wildfly compatible eliminating the costs of Weblogic server maintenance.',
-            'Remodelled critical customer facing systems in Cassandra(NoSQL)from relational Oracle Database in collaboration with various shareholder teams reducing SLAs of various functionalities in the Ordering system by ~ 50%',
+            'Remodelled critical customer facing systems in Cassandra(NoSQL) from relational Oracle Database in collaboration with various shareholder teams reducing SLAs of various functionalities in the Ordering system by ~ 50%',
             'Converted existing spring web applications into microservices to achieve dynamic scaling and faster release cycles.'
         ],
         icon: <MdWork />,
