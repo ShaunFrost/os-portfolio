@@ -4,6 +4,7 @@ import wordle_img from '@assets/projects/multiwordle-sample.webp'
 import cps_img from '@assets/projects/create-ps-sample.webp'
 import os_img from '@assets/projects/os-portfolio-sample.webp'
 import neko_img from '@assets/projects/neko-chan-sample.webp'
+import chat_img from '@assets/projects/chatterbox-sample.webp'
 
 export enum THEME {
     LIGHT = "light",
@@ -68,6 +69,14 @@ export const PROJECTS: ProjectType[] = [
         pic: wordle_img,
         websiteLink: "https://multiplayer-wordle-game.onrender.com/",
         keywords: ["React", "Socket", "Node", "Express"]
+    },
+    {
+        name: "Chatterbox",
+        desc: 'A realtime one-to-one chat application built on Firebase RealtimeDB using React/Typescript.',
+        gitlink: "https://github.com/ShaunFrost/chatterbox",
+        pic: chat_img,
+        websiteLink: "https://chatterbox-5915d.web.app/",
+        keywords: ["React", "Typescript", "Firebase", "Realtime DB"]
     },
     {
         name: "Neko Chan UI",
