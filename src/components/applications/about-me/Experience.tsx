@@ -17,6 +17,18 @@ type ExperienceType = {
 const EXPERIENCES: ExperienceType[] = [
     {
         title: 'Full Stack Engineer',
+        company: 'Muzify',
+        location: 'Bangalore, India',
+        desc: [
+            'Enabled revenue model by implementing payment architecture in web, ios and andriod apps.',
+            'Reduced database load and AWS bills by optimizing EC services and existing query models including addition of caching layers saving upto 15% on the bills.',
+            'Helped increase the user base from 100k to 500k by improving existing and adding new features to the react native ios and android apps.'
+        ],
+        icon: <MdWork />,
+        stint: 'July, 2024 - Current'
+    },
+    {
+        title: 'Full Stack Engineer',
         company: 'Homesome',
         location: 'San Francisco, CA',
         desc: [
