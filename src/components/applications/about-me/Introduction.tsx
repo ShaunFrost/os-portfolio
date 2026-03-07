@@ -53,10 +53,11 @@ const Introduction = () => {
             <motion.p className="intro-div" style={{font: 'monospace', fontSize: '1.2rem'}}
                 variants={paraVariants}
             >
-                I'm a skilled software engineer with experience in Javascript, AWS, 
-                Java, Cassandra and frameworks like React, Angular, Node.js. I'm self taught
-                in React, TypeScript, MongoDB, Electron, Three.JS having created 
-                various applications utilizing the aforementioned technology. 
+                Full-stack software engineer with 5+ years of total experience and 
+                3+ years of experience building scalable, user-centric web applications 
+                and reliable systems that power customer facing products. I build complex 
+                frontend systems using React, TypeScript, and modern tooling and design 
+                clean APIs and backend services with Node.js/Java.
                 Having worked with teams and colleagues across India and the United 
                 States, I have a strong sense of collaboration and understanding of
                 backgrounds. I'm a quick learner and I adapt to any technology  

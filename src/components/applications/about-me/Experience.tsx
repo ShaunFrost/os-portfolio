@@ -20,9 +20,10 @@ const EXPERIENCES: ExperienceType[] = [
         company: 'Muzify',
         location: 'Bangalore, India',
         desc: [
-            'Enabled revenue model by implementing payment architecture in web, ios and andriod apps.',
-            'Reduced database load and AWS bills by optimizing EC services and existing query models including addition of caching layers saving upto 15% on the bills.',
-            'Helped increase the user base from 100k to 500k by improving existing and adding new features to the react native ios and android apps.'
+            'Built and optimized a high-traffic music analytics platform serving 100K+ monthly users, focusing on performant React components, state management, and UI responsiveness, with supporting Node.js APIs and data modeling.',
+            'Achieved a 50% reduction in AWS costs by optimizing database queries and right-sizing instances.',
+            'Integrated Stripe payment systems across web and mobile, establishing first revenue stream.',
+            'Helped increase the user base from 100k to 900k by improving existing and adding new features to the react native ios and android apps.'
         ],
         icon: <MdWork />,
         stint: 'July, 2024 - Current'
@@ -33,7 +34,7 @@ const EXPERIENCES: ExperienceType[] = [
         location: 'San Francisco, CA',
         desc: [
             'Enabled ~ 25 underrepresented grocery stores with zero to low online presence to provide their customers with new shopping experience.',
-            'Developed new features for shopping platform including chat-based communication that enabled stores to connect with their customers.',
+            'Developed customer-store communication features, including chat workflows, to improve engagement and order clarity.',
             'Provided on-call support for root cause analysis of issues impacting customer revenue.'
         ],
         icon: <MdWork />,
@@ -44,7 +45,9 @@ const EXPERIENCES: ExperienceType[] = [
         company: 'Penn State University',
         location: 'State College, Pennsylvania',
         desc: [
-            'Created assignments, graded exams and conducted recitation sessions for a section of ~ 250 undergraduate students for Discrete Mathematics.'
+            'Assisted in teaching CMPSC 360, Discrete Mathematics, to over 200 undergraduate students.',
+            'Communicated complex technical concepts clearly to a diverse audience.',
+            'Reviewed and provided constructive feedback on assignments and term papers.'
         ],
         icon: <FaChalkboardTeacher />,
         stint: 'Aug, 2020 - May, 2021'
@@ -54,7 +57,9 @@ const EXPERIENCES: ExperienceType[] = [
         company: 'Penn State University',
         location: 'State College, Pennsylvania',
         desc: [
-            'Created quizzes, graded projects and conducted doubt clearing sessions for a section of ~ 40 undergraduate students for Object Oriented Programming.'
+            'Assisted in the instruction of Object Oriented Design (IST 311) for approximately 30 undergraduate students.',
+            'Developed and created assignments to enhance student learning and engagement.',
+            'Conducted doubt-clearing sessions to address student inquiries and foster understanding.'
         ],
         icon: <FaChalkboardTeacher />,
         stint: 'Jan, 2020 - May, 2020'
@@ -65,8 +70,8 @@ const EXPERIENCES: ExperienceType[] = [
         location: 'Chennai, India',
         desc: [
             'Developed a rule based automation tool that converts a Weblogic application, based on pre-defined rules, into open source Wildfly compatible eliminating the costs of Weblogic server maintenance.',
-            'Remodelled critical customer facing systems in Cassandra(NoSQL) from relational Oracle Database in collaboration with various shareholder teams reducing SLAs of various functionalities in the Ordering system by ~ 50%',
-            'Converted existing spring web applications into microservices to achieve dynamic scaling and faster release cycles.'
+            'Collaborated with cross-functional teams to remodel critical customer-facing systems in Cassandra, cutting SLAs by approximately 50%.',
+            'Transformed existing web applications into Spring Boot microservices, enhancing scalability and accelerating release cycles.'
         ],
         icon: <MdWork />,
         stint: 'Nov, 2017 - Jul, 2019'
@@ -76,7 +81,9 @@ const EXPERIENCES: ExperienceType[] = [
         company: 'Verizon',
         location: 'Chennai, India',
         desc: [
-            'Developed a dashboard for representing average response times of various services used by critical client systems, eliminating the bulk email reports sent on hourly basis and providing a one stop solution for monitoring.'
+            'Developed a comprehensive dashboard to visualize average response times for critical backend systems.',
+            'Provided a one-stop solution for enhanced service monitoring, improving operational efficiency and eliminating daily reports bulk email.',
+            'Collaborated with cross-functional teams to ensure seamless integration of the dashboard.'
         ],
         icon: <MdWork />,
         stint: 'Jul, 2016 - Oct, 2017'
@@ -87,7 +94,7 @@ const EXPERIENCES: ExperienceType[] = [
         location: 'Bangalore, India',
         desc: [
             'Developed an e-commerce android application for a furniture retail start-up.',
-            'Designed User Interfaces and built APIs for efficient data retrieval providing the customers a well-organized marketplace for furniture.'
+            'Designed User Interfaces and built APIs for efficient data retrieval.'
         ],
         icon: <MdWork />,
         stint: 'May, 2015 - Jul, 2015'

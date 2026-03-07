@@ -5,6 +5,7 @@ import cps_img from '@assets/projects/create-ps-sample.webp'
 import os_img from '@assets/projects/os-portfolio-sample.webp'
 import neko_img from '@assets/projects/neko-chan-sample.webp'
 import chat_img from '@assets/projects/chatterbox-sample.webp'
+import vfb_img from '@assets/projects/visual-flow-builder-sample.webp'
 
 export enum THEME {
     LIGHT = "light",
@@ -55,12 +56,12 @@ export const PROJECTS: ProjectType[] = [
         keywords: ["MATLAB", "Computer Vision", "AR"]
     },
     {
-        name: "Neptune",
-        desc: 'An offline desktop application to manage your side projects. Built with Electron JS for MacOS and Windows. Functionality to take markdown notes and draw application plans via canvas.',
-        gitlink: "https://github.com/ShaunFrost/neptune",
-        pic: neptune_img,
-        websiteLink: "https://github.com/ShaunFrost/neptune/releases",
-        keywords: ["Electron", "React", "TypeScript","Tailwind"]
+        name: "Visual Flow Builder",
+        desc: 'A basic visual flow builder to build workflows',
+        gitlink: "https://github.com/ShaunFrost/basic-visual-flow-builder",
+        pic: vfb_img,
+        websiteLink: "https://gentle-churros-44fbdd.netlify.app/",
+        keywords: ["React", "Typescript", "Tailwind"]
     },
     {
         name: "MultiPlayer Wordle",
@@ -69,6 +70,14 @@ export const PROJECTS: ProjectType[] = [
         pic: wordle_img,
         websiteLink: "https://multiplayer-wordle-game.onrender.com/",
         keywords: ["React", "Socket", "Node", "Express"]
+    },
+    {
+        name: "Neptune",
+        desc: 'An offline desktop application to manage your side projects. Built with Electron JS for MacOS and Windows. Functionality to take markdown notes and draw application plans via canvas.',
+        gitlink: "https://github.com/ShaunFrost/neptune",
+        pic: neptune_img,
+        websiteLink: "https://github.com/ShaunFrost/neptune/releases",
+        keywords: ["Electron", "React", "TypeScript","Tailwind"]
     },
     {
         name: "Chatterbox",

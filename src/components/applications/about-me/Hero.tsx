@@ -16,7 +16,7 @@ const Hero = () => {
             {!isPhone && <video src={heroBg} autoPlay loop muted id="hero-video"></video>}
             <div className="hero-inner">
                 <p style={{fontFamily: 'Ubuntu Mono', fontSize: '3rem'}}>Hi, I'm <span style={{color: 'lightgreen'}}>Rasesh</span></p>
-                <p style={{fontFamily: 'monospace', fontSize: '1.2rem'}} >I’m a full stack engineer passionate about working on technology and products that help people achieve better experience.</p>
+                <p style={{fontFamily: 'monospace', fontSize: '1.2rem'}} >I'm a software engineer who specializes in frontend as well as backend architecture while staying hands-on across the stack, shipping products end-to-end, improving performance, and writing maintainable systems that scale with teams and users.</p>
             </div>
             <div className="scroll-helper">
                 {/* <a href="#introduction" > */}
